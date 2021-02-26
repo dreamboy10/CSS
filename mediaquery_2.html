@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <title>flex_3_holyGrailLayout</title>
+  <style>
+    body {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .container {
+      display: flex;
+      flex-direction: column;
+      width: 800px;
+      border: 1px solid gray;
+    }
+    header {
+      border-bottom: 1px solid gray;
+      padding-left: 20px;
+    }
+    footer {
+      border-top: 1px solid gray;
+      padding: 20px;
+      text-align: center;
+    }
+    .content {
+      display: flex;
+    }
+    .content nav {
+      border-right: 1px solid gray;
+    }
+    .content aside {
+      border-left: 1px solid gray;
+    }
+    @media(max-width: 500px) {
+      .content {
+        flex-direction: column;
+      }
+      .content nav, .content aside {
+        border: none;
+        flex-basis: auto;
+      }
+      main {
+        order: 0;
+      }
+      nav {
+        order: 1;
+      }
+      aside {
+        order: 2;
+        display: none;
+      }
+    }
+    nav, aside {
+      flex-basis: 150px;
+      flex-shrink: 0;
+    }
+    main {
+      padding: 10px;
+    }
+    nav {
+      order: -1;
+    }
+  </style>
+</head>
+<body>
+   <div class="container">
+     <header>
+       <h1>네이버</h1>
+     </header>
+     <section class="content">
+       <main>
+         네이버는 검색엔진입니다. 네이버는 검색엔진입니다.네이버는 검색엔진입니다.네이버는 검색엔진입니다.네이버는 검색엔진입니다.네이버는 검색엔진입니다.네이버는 검색엔진입니다.네이버는 검색엔진입니다.네이버는 검색엔진입니다.네이버는 검색엔진입니다.네이버는 검색엔진입니다.네이버는 검색엔진입니다.
+       </main>
+       <nav>
+         <ul>
+           <li>메일</li>
+           <li>지도</li>
+           <li>뉴스</li>
+         </ul>
+       </nav>
+       <aside>
+         질문할 수 있는 지식in
+       </aside>
+     </section>
+     <footer>
+       <a href="https://www.naver.com/">네이버 홈페이지</a>
+     </footer>
+   </div>
+</body>
+</html>
