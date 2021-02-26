@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,
+  initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>parent_child_selector_1</title>
+  <style>
+    ul li {
+      color: red;
+    } /* 부모 자손 선택자 */
+    #lecture > li {
+      border: 1px solid red;
+    } /* 부모 자식 선택자 */
+    ul , ol {
+      background-color: powderblue;
+    } /* 형제 선택자 */
+  </style>
+</head>
+<body>
+  <ul>
+    <li>HTML</li>
+    <li>CSS</li>
+    <li>JavaScript</li>
+  </ul>
+  <ol id="lecture">
+    <li>HTML</li>
+    <li>CSS
+      <ol>
+        <li>selector</li>
+        <li>declaration</li>
+      </ol>
+    </li>
+    <li>JavaScript</li>
+  </ol>
+</body>
+</html>
