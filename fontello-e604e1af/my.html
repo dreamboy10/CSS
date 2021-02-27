@@ -4,15 +4,30 @@
   <meta charset="UTF-8">
   <title>my</title>
   <link rel="stylesheet" href="css/fontello.css">
+  <link rel="stylesheet" href="css/animation.css">
   <style>
     body {
       font-size: 100px;
     }
+    #test:before {
+      content: "s";
+      color: red;
+      font-size: 30px;
+    }
+    #test:after {
+      content: "e";
+    }
+    #male {
+      font-family: fontello;
+    }
   </style>
 </head>
 <body>
-  &#xf183; <br>
-  &#xf183;
-  <i class="icon-male"></i>
+  <div id="test">
+    A
+  </div>
+  <div id="male"> 
+  &#xf183;</div>
+  <i class="icon-male animate-spin"></i>
 </body>
 </html>
